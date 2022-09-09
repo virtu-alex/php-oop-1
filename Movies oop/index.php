@@ -33,12 +33,12 @@ class Movie
     }
 }
 
-$movie1 = new Movie(1, 'Lord Of The Rings', 'Fantasy ', '29 July, 1954 ', "./images/LOTR.jpg", 'J. R. R. Tolkien');
-$movie2 = new Movie(2, 'Sotto il sole di Amalfi', 'Commedia ', '4 Sept, 2022 ',  "./images/SISDA.png", 'Netflix');
-$movie3 = new Movie(3, 'The Godfather', 'Crime ', '14 March, 1972 ', "./images/thegodfather.jpg", 'Francis Ford Coppola');
-$movie4 = new Movie(4, 'Pinocchio', 'Family ', '6 Aug, 2022 ', "./images/pinocchio.jpg", 'Walt Disney+ Pictures');
-$movie5 = new Movie(5, 'Uncharted', 'Action ', '25 Jan, 2022 ', "./images/uncharted.jpg", 'Columbia Pictures, Atlas');
-$movie6 = new Movie(6, 'Thor: Love and Thunder', 'Action ', '13 Feb, 2022 ', "./images/thor.jpg", 'Marvel Studios');
+$movie1 = new Movie(1, 'Lord Of The Rings', 'Fantasy, ', '29 July, 1954 ', "./images/LOTR.jpg", 'J. R. R. Tolkien');
+$movie2 = new Movie(2, 'Sotto il sole di Amalfi', 'Commedia, ', '4 Sept, 2022 ',  "./images/SISDA.png", 'Netflix');
+$movie3 = new Movie(3, 'The Godfather', 'Crime, ', '14 March, 1972 ', "./images/thegodfather.jpg", 'Francis Ford Coppola');
+$movie4 = new Movie(4, 'Pinocchio', 'Family, ', '6 Aug, 2022 ', "./images/pinocchio.jpg", 'Walt Disney+ Pictures');
+$movie5 = new Movie(5, 'Uncharted', 'Action, ', '25 Jan, 2022 ', "./images/uncharted.jpg", 'Columbia Pictures, Atlas');
+$movie6 = new Movie(6, 'Thor: Love and Thunder,', 'Action, ', '13 Feb, 2022 ', "./images/thor.jpg", 'Marvel Studios');
 
 
 $movies = [
@@ -65,22 +65,22 @@ $movies = [
 
 <body>
     <div class="container">
-        <h2 class="text-center my-3 text-light">My Movies</h2>
+        <h2 class="text-center my-3 text-light bg-success">My Movies</h2>
         <div class="row">
             <?php foreach ($movies as $movie) : ?>
-                <div class="col bg-dark p-4 text-light text-center">
+                <div class="col bg-dark rounded m-1 p-4 text-light text-center">
                     <ul>
                         <li>
                             <h3>Movie ID</h3>
-                            <p><?= $movie->id ?></p>
+                            <p class="font-bold"><?= $movie->id ?></p>
                         </li>
                         <li>
                             <h3>Movie Title</h3>
                             <p><?= $movie->title ?></p>
                         </li>
-                        <img class="img-fluid" src="<?= $movie->poster ?>" alt="">
+                        <img src="<?= $movie->poster ?>" alt="">
                         <li>
-                            <h3>Movie details</h3>
+                            <h3>Movie details:</h3>
                             <p><?= $movie->getMovieDetails() ?></p>
                         </li>
                     </ul>
@@ -98,6 +98,10 @@ $movies = [
     }
     body{
         background-color: black;
+    }
+    img{
+        width: 300px;
+        height: 320px;
     }
     
 </style>
