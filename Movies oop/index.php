@@ -39,6 +39,15 @@ $movie4 = new Movie(4, 'Pinocchio', 'Family ', '6 Aug, 2022 ', 'Walt Disney+ Pic
 $movie5 = new Movie(5, 'Uncharted', 'Action ', '25 Jan, 2022 ', 'Columbia Pictures, Atlas');
 $movie6 = new Movie(6, 'Thor: Love and Thunder', 'Action ', '13 Feb, 2022 ', 'Marvel Studios');
 
+
+$movies = [
+    $movie1,
+    $movie2,
+    $movie3,
+    $movie4,
+    $movie5,
+    $movie6,
+];
 ?>
 
 <!DOCTYPE html>
@@ -48,97 +57,25 @@ $movie6 = new Movie(6, 'Thor: Love and Thunder', 'Action ', '13 Feb, 2022 ', 'Ma
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
+    <title>Movies</title>
 </head>
 
 <body>
     <h2>I miei Films</h2>
     <ul>
-        <?php  ?>
-        <li>
-            <h3>Movie ID</h3>
-            <?= $movie1->id ?>
-        </li>
-        <li>
-            <h3>Movie Title</h3>
-            <?= $movie1->title ?>
-        </li>
-        <li>
-            <h3>Movie details</h3>
-            <?= $movie1->getMovieDetails() ?>
-        </li>
+            <li>
+                <h3>Movie ID</h3>
+                <p><?= $movie->id ?></p>
+            </li>
+            <li>
+                <h3>Movie Title</h3>
+                <p><?= $movie->title ?></p>
+            </li>
+            <li>
+                <h3>Movie details</h3>
+                <p><?= $movie->getMovieDetails() ?></p>
+            </li>
     </ul>
-    <ul>
-        <li>
-            <h3>Movie ID</h3>
-            <?= $movie2->id ?>
-        </li>
-        <li>
-            <h3>Movie Title</h3>
-            <?= $movie2->title ?>
-        </li>
-        <li>
-            <h3>Movie details</h3>
-            <?= $movie2->getMovieDetails() ?>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <h3>Movie ID</h3>
-            <?= $movie3->id ?>
-        </li>
-        <li>
-            <h3>Movie Title</h3>
-            <?= $movie3->title ?>
-        </li>
-        <li>
-            <h3>Movie details</h3>
-            <?= $movie3->getMovieDetails() ?>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <h3>Movie ID</h3>
-            <?= $movie4->id ?>
-        </li>
-        <li>
-            <h3>Movie Title</h3>
-            <?= $movie4->title ?>
-        </li>
-        <li>
-            <h3>Movie details</h3>
-            <?= $movie4->getMovieDetails() ?>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <h3>Movie ID</h3>
-            <?= $movie5->id ?>
-        </li>
-        <li>
-            <h3>Movie Title</h3>
-            <?= $movie5->title ?>
-        </li>
-        <li>
-            <h3>Movie details</h3>
-            <?= $movie5->getMovieDetails() ?>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <h3>Movie ID</h3>
-            <?= $movie6->id ?>
-        </li>
-        <li>
-            <h3>Movie Title</h3>
-            <?= $movie6->title ?>
-        </li>
-        <li>
-            <h3>Movie details</h3>
-            <?= $movie6->getMovieDetails() ?>
-        </li>
-    </ul>
-    <?php ?>
 </body>
 
 </html>
