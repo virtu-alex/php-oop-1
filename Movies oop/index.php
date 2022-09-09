@@ -63,6 +63,7 @@ $movies = [
 <body>
     <h2>I miei Films</h2>
     <ul>
+        <?php foreach ($movies as $movie) : ?>
             <li>
                 <h3>Movie ID</h3>
                 <p><?= $movie->id ?></p>
@@ -75,6 +76,7 @@ $movies = [
                 <h3>Movie details</h3>
                 <p><?= $movie->getMovieDetails() ?></p>
             </li>
+        <?php endforeach ?>
     </ul>
 </body>
 
